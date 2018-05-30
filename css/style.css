@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
+body{
+	margin: 0;
+	padding: 0; 
+	background: #161616;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+a,a:hover{
+	color: #fff;
+	text-decoration: none;
+	text-align: center;
+}
+.row{
+	min-height: 50vh;
+	align-items: center;
+}
+ 
+.btn-hvr { 
+    font-size: 18px;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.btn-hvr:after,
+.btn-hvr:before{
+    position: absolute;
+    content: "";
+}
+
+/******** lily *********/
+.btn-lily::after{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #ffffff94;
+    border-bottom: 1px solid #ffffff94;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transform: scale(0,1);
+    -webkit-transform: scale(0,1);
+    -moz-transform: scale(0,1);
+}
+.btn-lily::before{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: #ffffff59;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+}
+.btn-lily:hover::after{
+	opacity: 1;
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+}
+.btn-lily:hover::before{
+	transform: scale(0,1);
+	-webkit-transform: scale(0,1);
+	-moz-transform: scale(0,1);
+	opacity: 0;
+}
+
+/********* btn-cross ***********/
+.btn-cross{
+	border-right: 1px solid;
+	border-left: 1px solid;
+	border-color: #ffffff57;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+}
+.btn-cross::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #ffffff57;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+}
+.btn-cross::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #ffffff57;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+}
+.btn-cross:hover{
+	border-color: transparent; 
+
+}
+.btn-cross:hover::after{ 
+transform: translate(0, 50%) rotate(-45deg);
+-webkit-transform: translate(0, 50%) rotate(-45deg);
+-moz-transform: translate(0, 50%) rotate(-45deg);
+bottom: 50%;
+}
+.btn-cross:hover::before{ 
+transform: translate(0, -50%) rotate(45deg);
+-webkit-transform: translate(0, -50%) rotate(45deg);
+-moz-transform: translate(0, -50%) rotate(45deg);
+top: 50%;
+}
+
+/********* glossy **************/
+.btn-glossy{    
+	overflow: hidden;
+    display: inline-block;
+}
+.btn-glossy::after,.btn-glossy::before{
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+.btn-glossy::after{
+	width: 100%;
+	height: 0%;
+	background: #ffffff6e;
+	top: -100px;
+	left: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;   
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+ }
+.btn-glossy::before{
+	width: 100%;
+	height: 0%;
+	background: #ffffff6e;
+	top: 0;
+	left: 0;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+
+}
+.btn-glossy:hover::before{
+	height: 100%;
+}
+.btn-glossy:hover::after{ 
+ 	top: 0;
+	height: 100%;
+}
+
+/******* sadie *******/
+.btn-sadie{
+	overflow: hidden;
+	display: inline-block;
+}
+.btn-sadie::after,.btn-sadie::before{
+	position: absolute;
+	content: "";
+}
+.btn-sadie::after{
+	top: 50px;
+    left:50%;
+    width: 0;
+    height: 0;
+	border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 190px solid rgba(255,255,255,0.25);
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+}
+.btn-sadie::before{
+	top: 110px;
+    left:50%;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 190px solid rgba(255,255,255,0.25);
+    z-index: 1;    
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+}
+.btn-sadie:hover::before{
+    opacity: 1;
+    -webkit-transform: translate(-50%,-190px);
+    transform: translate(-50%,-120px);
+}
+.btn-sadie:hover::after{
+    opacity: 1;
+    -webkit-transform: translate(-50%,-150px);
+    transform: translate(-50%,-100px);
+}
+
+/************ Honey ************/
+.btn-honey{}
+.btn-honey::after,.btn-honey::before{
+	position: absolute;
+	content: "";
+}
+.btn-honey::after{
+	width: 100%;
+	height: 100%;
+	background:#ffffff59;
+	top: 0;
+	left: 0; 
+	transform: scale(0,0);
+	-webkit-transform: scale(0,0);
+	-moz-transform: scale(0,0);
+	opacity: 0;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+.btn-honey::before{
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ffffff59;
+	top: 0;
+	left: 0; 
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+}
+.btn-honey:hover::after{
+	transform: scale(1,1);
+	-webkit-transform: scale(1,1);
+	-moz-transform: scale(1,1);
+	opacity: 1;
+}
+.btn-honey:hover::before{
+	transform: scale(1.3,1.3);
+	-webkit-transform: scale(1.3,1.3);
+	-moz-transform: scale(1.3,1.3);
+	opacity: 0;
+}
+/******* Zoo **********/
+.btn-zoo{    
+	perspective: 2000px;
+}
+.btn-zoo::after,.btn-zoo::before{
+	position: absolute;
+	content: "";
+	background: #ffffff59;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    transition: all 0.3s; 
+    -webkit-transition: all 0.3s; 
+    -moz-transition: all 0.3s; 
+}
+.btn-zoo::after{
+
+}
+.btn-zoo::before{ 
+
+}
+.btn-zoo:hover::after{    
+	transform: rotateX(-60deg) translate(0px,-40px);
+	-webkit-transform: rotateX(-60deg) translate(0px,-40px);
+	-moz-transform: rotateX(-60deg) translate(0px,-40px);
+}
+.btn-zoo:hover::before{    
+	transform: rotateX(60deg) translate(0px,40px);
+	-webkit-transform: rotateX(60deg) translate(0px,40px);
+	-moz-transform: rotateX(60deg) translate(0px,40px);
+}
